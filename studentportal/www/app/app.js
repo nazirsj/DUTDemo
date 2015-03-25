@@ -36,6 +36,14 @@ angular.module("studentportalApp",["ionic"])
           }
       }
     })
+    .state('app.studentdetail', {
+      url: "/studentdetail/:id",
+      views: {
+          'mainContent': {
+            templateUrl: "app/studentdetail/studentdetail.html"
+          }
+      }
+    })
     .state('app.search', {
       url: "/search",
       views: {
@@ -55,5 +63,5 @@ angular.module("studentportalApp",["ionic"])
 
 
     // if none of the above states are matched, use this as the fallback
-  	$urlRouterProvider.otherwise('/app/home');
+  	//$urlRouterProvider.otherwise('/app/home');
 });

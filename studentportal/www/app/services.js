@@ -9,19 +9,25 @@
 
             var deferred = $q.defer();
 
+                $ionicLoading.show({
+                    template: 'Loading...'
+                });
+
             $http.get("http://studentportalwebapi.azurewebsites.net/api/students")
                 .success(function(data) {
                     console.log("success...");
                     deferred.resolve(data);
+                    $ionicLoading.hide();
                 })
                 .error(function() {
                     console.log("Failed....");
+                    $ionicLoading.hide();
                     deferred.reject();
                 });
             return deferred.promise;
         }
 
-        function getLeagueData() {
+        function searchForStudent(id) {
 
             var deferred = $q.defer();
 
@@ -29,7 +35,30 @@
                     template: 'Loading...'
                 });
 
-                $http.get("http://elite-schedule.net/api/leaguedata/" + getLeagueId())
+                $http.get("http://studentportalwebapi.azurewebsites.net/api/students/" + id)
+                    .success(function(data, status) {
+                        console.log("success...");
+                        $ionicLoading.hide();
+                        deferred.resolve(data);
+                    })
+                    .error(function() {
+                        console.log("Failed....");
+                        $ionicLoading.hide();
+                        deferred.reject();
+                    });
+            return deferred.promise;
+        };
+
+
+        function getStudentResults(id) {
+
+            var deferred = $q.defer();
+
+                $ionicLoading.show({
+                    template: 'Loading...'
+                });
+
+                $http.get("http://studentportalwebapi.azurewebsites.net/api/results/" + id)
                     .success(function(data, status) {
                         console.log("success...");
                         $ionicLoading.hide();
@@ -44,7 +73,9 @@
         };
 
         return {
-            getStudents: getStudents
+            getStudents: getStudents,
+            searchForStudent: searchForStudent,
+            getStudentResults: getStudentResults
         };
     };
 })();
