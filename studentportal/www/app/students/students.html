@@ -1,5 +1,14 @@
-<ion-view>
+<ion-view title="Students" ng-controller="StudentsCtrl as vm">
   <ion-content class="has-header">
-    <h1>Students</h1>
+  <div class="list">
+  <div  ng-repeat="student in vm.students">
+  	<div class="item item-divider">
+	<h3>{{student.name}}</h3>
+	</div>
+	<p>Student Number - {{student.StudentNumber}}</p>
+	<p>Year - {{student.Year}}</p>
+	<p>Course - {{student.Course}}</p>
+	</div>
+  </div>
   </ion-content>
 </ion-view>

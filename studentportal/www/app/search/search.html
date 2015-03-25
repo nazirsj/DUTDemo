@@ -1,5 +1,11 @@
-<ion-view>
+<ion-view title="Search" ng-controller="SearchCtrl as vm">
   <ion-content class="has-header">
-    <h1>Search</h1>
-  </ion-content>
+         <div class="list">
+	        <label class="item item-input">
+	          <span class="input-label">Student Number</span>
+	          <input ng-model="vm.searchid" type="text">
+	        </label>
+            <button class="button button-full button-positive" ng-click="vm.search()">Search</button>
+          </div>
+        </ion-content>
 </ion-view>

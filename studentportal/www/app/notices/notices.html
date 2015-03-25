@@ -1,5 +1,18 @@
-<ion-view>
+<ion-view title="Notices" ng-controller="NoticesCtrl as vm">
   <ion-content class="has-header">
-    <h1>Notices</h1>
-  </ion-content>
+    <div class="card" ng-repeat="notice in vm.notices">
+        <div class="item item-divider">
+            {{notice.title}}
+        </div>
+
+        <a class="item item-text-wrap" ng-href="#/app/teams/{{vm.game.team1Id}}">
+            {{notice.description}}
+        </a>
+
+        <div class="item item-divider">
+            <span class="bold">Date:</span> {{notice.date | date:'yyy/mm/dd'}}
+        </div>
+    </div>
+
+ </ion-content>
 </ion-view>
