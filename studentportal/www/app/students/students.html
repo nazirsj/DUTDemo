@@ -1,14 +1,17 @@
 <ion-view title="Students" ng-controller="StudentsCtrl as vm">
-  <ion-content class="has-header">
-  <div class="list">
-  <div  ng-repeat="student in vm.students">
-  	<div class="item item-divider">
-	<h3>{{student.name}}</h3>
-	</div>
-	<p>Student Number - {{student.StudentNumber}}</p>
-	<p>Year - {{student.Year}}</p>
-	<p>Course - {{student.Course}}</p>
-	</div>
-  </div>
-  </ion-content>
+    <ion-content class="has-header">
+        <div class="list">
+            <div ng-repeat="student in vm.students">
+                <div class="item item-divider item-calm">
+                    <a class="item item-thumbnail-left" href="#">
+                        <img ng-src={{student.avatarURL}}>
+                        <h3>{{student.name}} {{student.surname}}</h3>
+                        <p>Student Number - {{student.studentNumber}}</p>
+                        <p>Course - {{student.course}}</p>
+                        <p>Year - {{student.year}}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
 </ion-view>
