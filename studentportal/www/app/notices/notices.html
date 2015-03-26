@@ -1,5 +1,7 @@
 <ion-view title="Notices" ng-controller="NoticesCtrl as vm">
   <ion-content class="has-header">
+  <div>
+    <button class="button icon ion-gear-a" ng-click="vm.add()"></button>
     <div class="card" ng-repeat="notice in vm.notices">
         <div class="item item-divider">
             {{notice.title}}
@@ -13,6 +15,6 @@
             <span class="bold">Date:</span> {{notice.date | date:'yyyy/dd/MM hh:mm:ss'}}
         </div>
     </div>
-
+</div>
  </ion-content>
 </ion-view>

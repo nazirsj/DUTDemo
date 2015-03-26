@@ -49,6 +49,28 @@
             return deferred.promise;
         }
 
+        function addNotice(notice) {
+
+            var deferred = $q.defer();
+
+                $ionicLoading.show({
+                    template: 'Loading...'
+                });
+
+            $http.post("http://studentportalwebapi.azurewebsites.net/api/notices",notice)
+                .success(function(data) {
+                    console.log("success...");
+                    deferred.resolve(data);
+                    $ionicLoading.hide();
+                })
+                .error(function() {
+                    console.log("Failed....");
+                    $ionicLoading.hide();
+                    deferred.reject();
+                });
+            return deferred.promise;
+        }        
+
         function searchForStudent(id) {
 
             var deferred = $q.defer();
@@ -98,7 +120,8 @@
             getStudents: getStudents,
             searchForStudent: searchForStudent,
             getStudentResults: getStudentResults,
-            getNotices: getNotices
+            getNotices: getNotices,
+            addNotice: addNotice
         };
     };
 })();

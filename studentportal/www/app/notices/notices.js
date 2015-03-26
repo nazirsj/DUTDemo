@@ -1,9 +1,9 @@
 (function () {
     'use strict';
 
-    angular.module('studentportalApp').controller('NoticesCtrl', ['$scope','$stateParams','studentportalApi', NoticesCtrl]);
+    angular.module('studentportalApp').controller('NoticesCtrl', ['$scope','$stateParams','studentportalApi','$state', NoticesCtrl]);
 
-    function NoticesCtrl($scope,$stateParams,studentportalApi) {
+    function NoticesCtrl($scope,$stateParams,studentportalApi,$state) {
 
         var vm = this;
         console.log($stateParams);
@@ -21,5 +21,9 @@
         };
 
         RefreshNotices();
+
+        vm.add = function(){
+            $state.transitionTo('app.addnotice');
+        };
     };
 })();

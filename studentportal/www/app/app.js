@@ -59,8 +59,15 @@ angular.module("studentportalApp",["ionic"])
             templateUrl: "app/notices/notices.html"
           }
       }
+    })
+    .state('app.addnotice', {
+      url: "/addnotice",
+      views: {
+          'mainContent': {
+            templateUrl: "app/addnotice/addnotice.html"
+          }
+      }
     });
-
 
     // if none of the above states are matched, use this as the fallback
   	$urlRouterProvider.otherwise('/app/home');
