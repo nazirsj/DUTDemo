@@ -14,7 +14,7 @@
             studentportalApi.addNotice(vm.notice).then(function(data) {
                 console.log('added notice',data);
                 vm.notice = data;                
-                $state.transitionTo('app.notices');
+                $state.go('app.notices');
             }).finally(function(){
                 $scope.$broadcast('scroll.refreshComplete');
             });

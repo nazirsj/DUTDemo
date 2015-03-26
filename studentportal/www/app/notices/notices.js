@@ -29,5 +29,15 @@
         vm.refresh = function(){
              RefreshNotices();
         };
+
+        vm.remove = function(id){
+            console.log('removing....',id);
+            studentportalApi.removeNotice(id).then(function(data) {
+                console.log('notice removed',data);
+                RefreshNotices();                
+            }).finally(function(){
+                $scope.$broadcast('scroll.refreshComplete');
+            });
+        };
     };
 })();

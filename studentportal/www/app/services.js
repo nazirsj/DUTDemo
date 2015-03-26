@@ -70,7 +70,30 @@
                     deferred.reject();
                 });
             return deferred.promise;
-        }        
+        }
+
+        function removeNotice(id) {
+
+            var deferred = $q.defer();
+
+                $ionicLoading.show({
+                    template: 'Loading...'
+                });
+
+            $http.delete("http://studentportalwebapi.azurewebsites.net/api/notices/"+id)
+            //$http.post("http://localhost/StudentPortal.WebApi/api/notices",notice)
+                .success(function(data) {
+                    console.log("success...");
+                    deferred.resolve(data);
+                    $ionicLoading.hide();
+                })
+                .error(function() {
+                    console.log("Failed....");
+                    $ionicLoading.hide();
+                    deferred.reject();
+                });
+            return deferred.promise;
+        }                  
 
         function searchForStudent(id) {
 
@@ -122,7 +145,8 @@
             searchForStudent: searchForStudent,
             getStudentResults: getStudentResults,
             getNotices: getNotices,
-            addNotice: addNotice
+            addNotice: addNotice,
+            removeNotice: removeNotice
         };
     };
 })();
