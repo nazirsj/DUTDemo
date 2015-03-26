@@ -1,0 +1,22 @@
+<ion-view title="Latest News">
+  <ion-content class="has-header">
+  <h3>Latest news</h3>
+  </ion-content>
+</ion-view>
+
+
+<ion-view title="Home" ng-controller="NewsCtrl as vm">
+  <ion-content class="has-header">
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="vm.loadList()"></ion-refresher>
+    <div class="list">
+        <div ng-repeat="newsItem in vm.news">
+            <div class="item item-divider item-dark">{{newsItem.description}}</div>
+
+            <a href="{{newsItem.contentURL}}" class="item item-icon-right">
+                view online
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </a>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,19 @@
+<ion-view title="Add Notice" ng-controller="AddNoticeCtrl as vm">
+    <ion-content class="has-header">
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">Title</span>
+                <input ng-model="vm.notice.title" type="text">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Description</span>
+                <input ng-model="vm.notice.description" type="text">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Date</span>
+                <input ng-model="vm.notice.date" type="date">
+            </label>
+            <button class="button button-full button-positive" ng-click="vm.post()">Post</button>
+        </div>
+    </ion-content>
+</ion-view>

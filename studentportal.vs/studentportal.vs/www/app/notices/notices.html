@@ -1,0 +1,22 @@
+<ion-view title="Notices" ng-controller="NoticesCtrl as vm">
+  <ion-content class="has-header">
+  <div>
+    <button class="button icon ion-gear-a" ng-click="vm.add()"></button>
+    <button class="button icon ion-refresh" ng-click="vm.refresh()"></button>
+    <div class="card" ng-repeat="notice in vm.notices">
+        <div class="item item-divider">
+            {{notice.title}}
+        </div>
+
+        <a class="item item-text-wrap">
+            {{notice.description}}
+        </a>
+        
+        <div class="item item-divider">
+            <span class="bold">Date:</span> {{notice.date | date:'yyyy/dd/MM hh:mm:ss'}}
+        </div>
+        <button class="button button-full button-positive" ng-click="vm.remove(notice.id)">Remove</button>
+    </div>
+ </div>
+ </ion-content>
+</ion-view>

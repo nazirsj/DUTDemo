@@ -1,0 +1,40 @@
+<ion-view title="Students" ng-controller="StudentdetailCtrl as vm">
+    <ion-content class="has-header">
+        <div class="list">
+            <a class="item item-thumbnail-left" href="#">
+                <img ng-src={{vm.student.avatarURL}}>
+                <h3>{{student.name}} {{vm.student.surname}}</h3>
+                <p>Student Number - {{vm.student.studentNumber}}</p>
+                <p>Course - {{vm.student.course}}</p>
+                <p>Year - {{vm.student.year}}</p>
+            </a>
+        </div>
+        <div class="item item-divider item-energized">Results</div>
+        <div class="item" ng-repeat="result in vm.studentResults">
+  
+                <div class="item item-divider item-balanced">{{result.subject.name}} - {{result.subject.code}}</div>
+                <div class="row">
+                    <div class="col">
+                        <h4>Year Mark</h4>
+                    </div>
+                    <div class="col">
+                        <h4>Exam Mark</h4>
+                    </div>
+                    <div class="col">
+                        <h4>Final Mark</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h4>{{result.yearMark}}</h4>
+                    </div>
+                    <div class="col">
+                        <h4>{{result.examMark}}</h4>
+                    </div>
+                    <div class="col">
+                        <h4>{{result.finalMark}}</h4>
+                    </div>
+                </div>
+        </div>
+    </ion-content>
+</ion-view>
