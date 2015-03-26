@@ -138,7 +138,29 @@
                         deferred.reject();
                     });
             return deferred.promise;
-        };
+        }
+
+        function getNews() {
+
+            var deferred = $q.defer();
+
+                $ionicLoading.show({
+                    template: 'Loading...'
+                });
+
+            $http.get("http://studentportalwebapi.azurewebsites.net/api/news")
+                .success(function(data) {
+                    console.log("success...");
+                    deferred.resolve(data);
+                    $ionicLoading.hide();
+                })
+                .error(function() {
+                    console.log("Failed....");
+                    $ionicLoading.hide();
+                    deferred.reject();
+                });
+            return deferred.promise;
+        }        
 
         return {
             getStudents: getStudents,
@@ -146,7 +168,8 @@
             getStudentResults: getStudentResults,
             getNotices: getNotices,
             addNotice: addNotice,
-            removeNotice: removeNotice
+            removeNotice: removeNotice,
+            getNews: getNews
         };
     };
 })();

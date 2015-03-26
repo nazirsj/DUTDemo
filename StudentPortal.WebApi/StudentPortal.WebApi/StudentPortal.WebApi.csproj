@@ -220,6 +220,7 @@
     <Compile Include="Controllers\AcademicRecordController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\NoticesController.cs" />
     <Compile Include="Controllers\ResultsController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
@@ -235,6 +236,7 @@
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\News.cs" />
     <Compile Include="ViewModels\Notice.cs" />
     <Compile Include="ViewModels\Result.cs" />
     <Compile Include="ViewModels\Student.cs" />

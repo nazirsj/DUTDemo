@@ -120,5 +120,16 @@ namespace StudentPortal.WebApi.DataManager
             var notice = notices.Where(x => x.Id == id).FirstOrDefault();
             notices.Remove(notice);
         }
+
+
+        public IEnumerable<News> GetNews()
+        {
+            var newsContent = new List<News>();
+            newsContent.Add(new News(1, "http://www.dut.ac.za/doctoral-and-masters-positions-available-mainly-for-south-african-candidates/", "DOCTORAL AND MASTER’S POSITIONS AVAILABLE"));
+            newsContent.Add(new News(2, "http://www.dut.ac.za/dut-launches-official-app/", "DURBAN UNIVERSITY OF TECHNOLOGY LAUNCHES APP"));
+            newsContent.Add(new News(3, "http://www.dut.ac.za/anniversary-celebrations-of-the-salb/", "ANNIVERSARY CELEBRATIONS OF THE SALB"));
+            newsContent.Add(new News(4, "http://www.dut.ac.za/biotech_s_food_product_launch_gallery/", "BIOTECH’S FOOD PRODUCT LAUNCH GALLERY"));
+            return newsContent;
+        }
     }
 }
