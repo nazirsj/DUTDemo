@@ -13,7 +13,8 @@
         vm.post = function(){
             studentportalApi.addNotice(vm.notice).then(function(data) {
                 console.log('added notice',data);
-                vm.notices = data;                
+                vm.notice = data;                
+                $state.transitionTo('app.notices');
             }).finally(function(){
                 $scope.$broadcast('scroll.refreshComplete');
             });

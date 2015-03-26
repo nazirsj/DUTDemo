@@ -25,5 +25,9 @@
         vm.add = function(){
             $state.transitionTo('app.addnotice');
         };
+
+        vm.refresh = function(){
+             RefreshNotices();
+        };
     };
 })();

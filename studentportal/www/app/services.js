@@ -58,6 +58,7 @@
                 });
 
             $http.post("http://studentportalwebapi.azurewebsites.net/api/notices",notice)
+            //$http.post("http://localhost/StudentPortal.WebApi/api/notices",notice)
                 .success(function(data) {
                     console.log("success...");
                     deferred.resolve(data);

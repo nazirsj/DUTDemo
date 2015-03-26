@@ -111,12 +111,14 @@ namespace StudentPortal.WebApi.DataManager
 
         internal void AddNotice(Notice notice)
         {
-            throw new NotImplementedException();
+           notice.Id = (notices.Max(x  => x.Id)+1);
+           notices.Add(notice);
         }
 
         internal void DeleteNotice(int id)
         {
-            throw new NotImplementedException();
+            var notice = notices.Where(x => x.Id == id).FirstOrDefault();
+            notices.Remove(notice);
         }
     }
 }
