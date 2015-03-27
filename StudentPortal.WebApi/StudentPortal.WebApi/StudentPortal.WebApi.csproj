@@ -250,6 +250,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Icon.png" />
     <Content Include="Resources\Images\bob.jpg" />
     <Content Include="Resources\Images\sally.jpg" />
     <Content Include="Resources\Images\tim.jpg" />
