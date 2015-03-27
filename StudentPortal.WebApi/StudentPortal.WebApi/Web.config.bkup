@@ -9,12 +9,12 @@
     <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
   <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 --></configSections>
   <connectionStrings>
-    <add name="DefaultConnection" connectionString="$(ReplacableToken_DefaultConnection-Web.config Connection String_0)" providerName="System.Data.SqlClient" />
+    <add name="DefaultConnection" connectionString="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\aspnet-StudentPortal.WebApi-20150323095155.mdf;Initial Catalog=aspnet-StudentPortal.WebApi-20150323095155;Integrated Security=True" providerName="System.Data.SqlClient" />
   </connectionStrings>
   <appSettings></appSettings>
   <system.web>
     <authentication mode="None" />
-    <compilation targetFramework="4.5" />
+    <compilation debug="true" targetFramework="4.5" />
     <httpRuntime targetFramework="4.5" />
   </system.web>
   <system.webServer>
@@ -24,6 +24,8 @@
     
   <handlers>
       <remove name="ExtensionlessUrlHandler-Integrated-4.0" />
+      <remove name="OPTIONSVerbHandler" />
+      <remove name="TRACEVerbHandler" />
       <add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
     </handlers></system.webServer>
   <runtime>

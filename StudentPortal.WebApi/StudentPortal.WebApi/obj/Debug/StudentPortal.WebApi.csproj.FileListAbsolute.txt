@@ -127,6 +127,7 @@ E:\Development\Git\DUTDemo\StudentPortal.WebApi\StudentPortal.WebApi\bin\System.
 E:\Development\Git\DUTDemo\StudentPortal.WebApi\StudentPortal.WebApi\bin\System.Web.WebPages.Deployment.xml
 E:\Development\Git\DUTDemo\StudentPortal.WebApi\StudentPortal.WebApi\bin\System.Web.WebPages.Razor.xml
 E:\Development\Git\DUTDemo\StudentPortal.WebApi\StudentPortal.WebApi\bin\System.Web.Optimization.xml
+E:\Development\Git\DUTDemo\StudentPortal.WebApi\StudentPortal.WebApi\obj\Debug\StudentPortal.WebApi.csprojResolveAssemblyReference.cache
 E:\Development\Git\DUTDemo\StudentPortal.WebApi\StudentPortal.WebApi\obj\Debug\StudentPortal.WebApi.dll
 E:\Development\Git\DUTDemo\StudentPortal.WebApi\StudentPortal.WebApi\obj\Debug\StudentPortal.WebApi.pdb
 E:\Development\Git\DUTDemo\StudentPortal.WebApi\StudentPortal.WebApi\obj\Debug\StudentPortal.WebApi.csprojResolveAssemblyReference.cache
