@@ -7,6 +7,10 @@ namespace StudentPortal.WebApi.ViewModels
 {
     public class Notice
     {
+        public Notice()
+	    {
+
+	    }
         public Notice(int id, string title, string description, DateTime date)
         {
             this.Id = id;

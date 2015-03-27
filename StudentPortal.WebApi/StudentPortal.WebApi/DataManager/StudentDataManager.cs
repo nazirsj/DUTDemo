@@ -61,7 +61,6 @@ namespace StudentPortal.WebApi.DataManager
 
         public Student GetBob { get { return new Student(3, "Bob", "Yellow", 201503, "BSc:  Computer Science", "Third", "http://studentportalwebapi.azurewebsites.net/resources/images/bob.jpg"); } }
 
-
         public IEnumerable<StudentResults> GetResults()
         {
             var tim = GetTim;
@@ -87,10 +86,9 @@ namespace StudentPortal.WebApi.DataManager
             {
                 Results = new List<Result>()
                 {
-                    new Result(1,dev401i,60,70,67),
-                    new Result(2,ntw401i,80,90,87),
-                    new Result(3,ops401i,95,98,97),
-                    new Result(4,rit4801,80,80,80)
+                    new Result(1,dev401i,66,90,77),
+                    new Result(3,ops401i,95,95,95),
+                    new Result(4,rit4801,82,82,82)
                 }
             };
 
@@ -98,10 +96,8 @@ namespace StudentPortal.WebApi.DataManager
             {
                 Results = new List<Result>()
                 {
-                    new Result(1,dev401i,60,70,67),
-                    new Result(2,ntw401i,80,90,87),
-                    new Result(3,ops401i,95,98,97),
-                    new Result(4,rit4801,80,80,80)
+                    new Result(1,dev401i,50,55,52),
+                    new Result(4,rit4801,82,83,84)
                 }
             };
 

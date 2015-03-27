@@ -1,0 +1,43 @@
+﻿@model IEnumerable<StudentPortal.WebApi.ViewModels.Notice>
+
+@{
+    ViewBag.Title = "Notices";
+}
+
+<h2>Notices</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddNotice")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "DeleteNotice", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

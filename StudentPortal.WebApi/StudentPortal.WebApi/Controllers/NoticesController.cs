@@ -41,5 +41,6 @@ namespace StudentPortal.WebApi.Controllers
             dataManager.DeleteNotice(id);
 
         }
+
     }
 }
